@@ -1,1 +1,29 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>하이퍼링크</title>
+</head>
+<body>
+  <h1 title="여기는 제목입니다">하이퍼링크 관련 속성</h1>
+  <div>
+    <a href="/" title="누르시면 이동합니다.">더보기</a>
+    <!-- 더보기 위에 마우스 올리면 포인터모양이 변함 -->
+  </div>
+  <div>
+    <a href="/" title="다운로드"><!-- title은 부가적 설명이다-->
+      <img src="images/brochure.png" alt="카페 W 강좌 브로슈어" />
+      <!-- 스크린 리더가 읽을 수 있기 때문에 alt와 title을 두 다 읽게 된다 그리고 title은 전역속성이라 class id hidden등과 같이다른 모든 곳에 사용 가능 -->
+    </a>
+  </div>
+
+  <div>
+    <a href="/" aria-label="카페 W 강좌 브로슈어 다운로드" download>
+      <img src="images/brochure.png" alt="" />
+    </a>
+  </div>
+  
+</body>
+</html>
