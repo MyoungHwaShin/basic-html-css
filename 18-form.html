@@ -1,1 +1,55 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 관련 요소</title>
+  </head>
+  <body>
+    <h1>폼 관련 요소</h1>
+    <form action="서버URL" method="get">
+      <!-- 기존에는 같은 form내에 있어야만 연결이 되는데
+      이제 form에 id를 적용하고 버튼에 form을 연결해줘서 버튼이 form 바깥에 있어도 사용가능 -->
+    <fieldset>
+      <!-- 필드셋은 연관 서식을 묶어 준다 -->
+      <legend>검색</legend>
+      <div>
+        <label for="search">검색어</label>
+        <!-- label에 search랑 input에 search는 서로 연관있음을 알리는 것이다.명식적으로 -->
+        <input id="search" type="search" maxlength="10" minlength="6" placeholder="검색어" />
+        <!-- input 태그 개쩐다 https://www.miketaylr.com/pres/html5/forms2.html -->
+        <!-- label/input 얘네는 세트야 함께 써야해 
+        input 값은 type에 따라 매우 다른 서식을 갖는다.
+        web forms 2.0(이게 지원되면 유효성 검증을 웹자체가 갖게 된다.)
+        -->
+      </div>
+
+    <label for="">카드번호</label>
+    <input type="text" id="cardNumb aria-label="앞 4자리" /> - 
+    <input type="text" /> - 
+    <input type="text" /> - 
+    <input type="text" />
+
+      </fieldset>
+    </form>
+    <button type="submit" form="searchform"></button>
+
+    <div>
+      <label for=""></label>
+      <select name="" id="">
+        <option value=""></option>
+      </select>
+      
+    </div>
+    <div>
+      <label for=""></label>
+      <textarea name="" id="" cols="30" rows="10">
+    </div>
+
+    <button>전송</button>
+
+
+    </textarea>
+  </body>
+</html>
