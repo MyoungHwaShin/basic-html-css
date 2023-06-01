@@ -1,1 +1,24 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <title>내부 스타일 시트(Embedded Style Sheet)</title>
+  <style>
+    body{
+      margin: 40px;
+      background: #000;
+      color: #fff;
+    }
+    p{
+      text-shadow: 1px 1px 0 #ff0;
+    }
+
+    /* 임베디드 방식과 익스터널 방식의 차이와 익스터널 방식을 선호하는 이유는 ? 
+    성능면에서는 캐싱이 장점입니다. 또 재사용이 가능합니다*/
+  </style>
+</head>
+<body>
+  <h1>내부 스타일 시트(Embedded Style Sheet)</h1>
+  <p>&lt;style&gt; 요소 내에 직접 CSS 코드를 작성하여 HTML 문서에 스타일을 적용합니다.</p>
+</body>
+</html>
