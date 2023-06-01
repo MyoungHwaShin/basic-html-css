@@ -5,13 +5,21 @@
   상속받는다
    */
 }
+/* 가상 요소 선택자
+드래그시 색이 변하는 것
+*/
+::selection {
+  background: #373e6a;
+  color: hotpink;
+}
+
 /* CSS 선택자(Selector) */
 /* 전체 태그 선택자 */
 /* 이렇게 통으로 선택자 쓰는거랑 아이디에 스타일 주는 거
 둘 다 안티패턴라고 하셨다 */
 body {
   font-family: "SUIT";
-  margin: 0px;
+  
   font-weight: 300;
   background-color: #000000;
   /* 000000은 모니터에 따라 색이 다르게 검정을 표현한다 이쁜 검정은 #181818 ,#121212*/
@@ -69,6 +77,12 @@ rgb
   text-shadow: 4px 4px 3px #77f;
 }
 
+.align {
+  text-align: center;
+
+}
+
+
 ul.menu{
 	margin: 0;
 	padding-left: 0;
@@ -83,3 +97,116 @@ id는 한번밖에 사용하지 못합니다.*/
 #demo {
   border: red 5px solid;
 }
+
+/* 속성 선택자 pdf,, */
+.menu a[href$=".html"] {
+  background-color: blue;
+
+}
+
+/* 
+
+[lang="en"] {
+  font-family: Helvetica;
+}
+캐럿기호 / 이걸로 시작하는거 찾아
+a[href^="https://"] {
+  background: url("../assets/images/external-link.png") no-repeat 100% 0;
+	padding-right: 30px;
+}
+
+a[href$=".pdf"] {
+  font-weight: 700;
+} */
+
+/* 선택자 목록
+ */
+ .fancy, .menu{
+
+font-size: 50px;
+
+ }
+
+ /* 가상 요소 선택자 
+ 원래 있어야 하는데 가상으로 만들어 넣는 것
+ 드래그 선택시 p요소 안에 자식 요소로
+ 텍스트 노드에 형제 컨텐츠를 앞 뒤로 만들어 준 것 
+ 이 가상 요소들은 나의 가상요소이기 때문에
+ 사이를 띄우지 않고 붙여서 만들어줄 것
+ */
+ /* 앞 */
+ .align::before{
+  content: "이전 요소";
+ }
+/* 뒤 */
+ .align::after{
+  content:"좋아요";
+
+ }
+
+ /* 변수를 만들어 준다
+ ex) --primary-color: #545454;
+ 조건을 줄 것
+ a가 포커스를 받으면
+ a의 부모를 선택하지 못했었는데
+ 이제는 가능하지렁
+ 그게 focus-within
+ */
+
+ /* input:disabled
+ input:valid
+ 값이 유효한 상태(값이 딱 맞을 때) 체크드 마크를 디자인해주기
+ input:invalid
+ 오류나면 주변에 빨간테두리 주기 오류를 알려줌 스크립트로 하기보다 이게 더 자원아껴준당
+ */
+
+ /* 
+ .menu li:nth-child(2){
+두번째 자식한테 적용하기
+ }
+ .menu li:ntn-child(-n + 2){
+-n+2 라는 것은 네거티브 방식
+ }
+
+ .menu li:nth-child(n+6){
+ }
+ */
+
+ /* .menu li:nth-child(-n + 2), .menu li:nth-child(n + 7) {
+
+color: yellow;
+
+
+ } */
+
+ /* .menu li:nth-child(odd){
+color:grey;
+홀수만
+ } */
+
+ /* 
+ 호버는 다 사용 가능
+ .menu a:hover {
+ border: 5px solid orange;
+ 
+ 
+} */
+
+/* 포커서블하게 만드려면 tabindex=0 주기 */
+
+
+h1.menu:hover,
+h1.menu:focus{
+  background-color: teal;
+
+}
+
+/* agent 스타일은 내가 적용하지 않아요 웹에 기본 적으로 장착된 스타일을 말한다.
+이를 제거 하고 싶다면 reset을 사용한다. */
+/* 
+css reset 은
+기본 스타일 거의 없애고 새로 스타일 주기
+css normalize는
+브라우저마다 약간씩 상이한 스타일을
+모두 평이하고 같게 만들어주는 것 
+*/
