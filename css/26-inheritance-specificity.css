@@ -1,4 +1,56 @@
 body {
   font-family: "SUIT";
-  font-weight: 300;
+  font-weight: 700;
 }
+.menu {
+  color: gray;
+  /* 이거는 안 먹음 ul을 그런거라 */
+  font-size: 36px;
+  /* 컬러는 밑에서 강제 상속 받게 태그 넣었는데
+  왜 사이즈는 그냥 먹냐 ? */
+  border: 5px green dashed;
+  /* border는 상속되지 않는 속성이야 */
+
+
+}
+/* a를 직접 선택 후 컬러 주기 
+상속이 아닌 a한테 직접 줌
+기존 에이전트 스타일인 블루컬러는 바꿔줌*/
+
+/* .menu a로 해도 .menu li a와 같이 결과가 나온다 
+개발에서는 복잡한 형태의 뎁스는 자제하자*/
+.menu li a {
+
+/* color: green; 컬러 직접 변경 */
+color: inherit;
+/* 상속으로 주기 위에 .menu에 있는게 상속받음*/
+
+}
+.menu li{
+  background-color: pink !important;
+  /* !important는 남발하면 안된다 절대로 */
+}
+/* 가장 강력하게 적용하고 싶으면   background-color: pink !important;
+ */
+/* 클래스 선택자와 클래스+태그가 싸우면 두개가 이겨
+힘이 더 쎄서 클래스거는 적용이 안되는거임 
+붙는게 많을 수록 점수가 높아진다 하지만 클래스가 제일 높은 점수임
+생각보다 단순하지 ?
+만약 꼭 써야하면 밑에서 .pick에다가
+앞에 li.pick(li이면서 pick클래스인 것)을 쓰면 된다.
+ */
+
+li.pick {
+background-color:yellow;
+
+}
+
+/* .menu li{
+border: inherit;
+  /* 이렇게 하면 보더를 상속 받지요 ~ 하지만 ul도 적용됨 */
+
+/* 외우지말고 논리적으로 생각해봐
+상속받는게 당연한 것도 당연하지 않은 것이 생각날거야
+원리는 모르면 너는 그냥 코더야 개발자가 되야 하지 않을까
+그렇지 !!!!!!! */
+/* 상속과 겹침과 우선순위를 논리적으로 이해할 것 */
